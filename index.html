@@ -429,7 +429,7 @@ You must replace <code>{token-should-replace-with-yours}></code> with your perso
 </textarea></p>
 <h1 id='submit-new-jobs'>Submit new Jobs</h1><h2 id='post-job-individually'>Post job individually</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'rest-client'</span>
 
-<span class="no">RestClient</span><span class="p">.</span><span class="nf">post</span> <span class="s1">'https://mergely.app/api/v3/job/submit'</span><span class="p">,</span>
+<span class="no">RestClient</span><span class="p">.</span><span class="nf">post</span> <span class="s1">'https://console.mergely.app/api/v3/job/submit'</span><span class="p">,</span>
   <span class="p">{</span>
     <span class="n">input_param</span><span class="p">:{</span>
       <span class="n">file</span><span class="ss">:"http://example.com/example.mp3"</span>
@@ -442,7 +442,7 @@ You must replace <code>{token-should-replace-with-yours}></code> with your perso
   <span class="p">}</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">'https://mergely.app/api/v3/job/submit'</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://console.mergely.app/api/v3/job/submit'</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'Bearer {token-should-replace-with-yours}'</span><span class="p">,</span>
     <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'Application/json'</span><span class="p">,</span>
@@ -461,7 +461,7 @@ You must replace <code>{token-should-replace-with-yours}></code> with your perso
 
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mergely.app/api/v3/job/submit"</span> <span class="se">\</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://console.mergely.app/api/v3/job/submit"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {token-should-replace-with-yours}"</span>
   <span class="nt">-H</span> <span class="s2">"Accept: Application/json"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Content-Type: Application/json"</span> <span class="se">\</span>
@@ -473,7 +473,7 @@ You must replace <code>{token-should-replace-with-yours}></code> with your perso
             "biz":"speech2text"
         }
   }'</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://mergely.app/api/v3/job/submit</span><span class="dl">"</span><span class="p">,{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://console.mergely.app/api/v3/job/submit</span><span class="dl">"</span><span class="p">,{</span>
     <span class="na">method</span><span class="p">:</span><span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
     <span class="na">headers</span><span class="p">:{</span>
         <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bearer {token-should-replace-with-yours}</span><span class="dl">"</span><span class="p">,</span>
@@ -495,7 +495,7 @@ You must replace <code>{token-should-replace-with-yours}></code> with your perso
 </code></pre></div>
 <p>This endpoint create new single job.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>POST https://mergely.app/api/v3/job/submit</code></p>
+<p><code>POST https://console.mergely.app/api/v3/job/submit</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -526,7 +526,7 @@ You must replace <code>{token-should-replace-with-yours}></code> with your perso
 Remember — Don't forge to replace with your own <b>TOKEN</b>
 </aside>
 <h2 id='post-jobs-in-buck'>Post jobs in buck</h2><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST https://mergely.app/api/v3/job/submit/batch</code></p>
+<p><code>POST https://console.mergely.app/api/v3/job/submit/batch</code></p>
 <h3 id='post-body'>Post body</h3>
 <p>Please submit jobs data as raw-body. You need to bring content-type:application/json and accept:application/json in the request header.
 <b>input_param[&#39;file&#39;]</b> and <b>biz</b> are required.</p>
@@ -555,7 +555,7 @@ Remember — Don't forge to replace with your own <b>TOKEN</b>
   <span class="p">{</span> <span class="n">input_param</span><span class="p">:{</span><span class="ss">file: </span><span class="s1">'http://all.oss.aliyuncs.com/2.zip'</span><span class="p">},</span><span class="n">biz</span><span class="ss">:"speech2text"</span> <span class="p">}]</span>
 <span class="p">}.</span><span class="nf">to_json</span>
 
-<span class="no">RestClient</span><span class="p">.</span><span class="nf">post</span> <span class="s1">'https://mergely.app/api/v3/job/submit/batch'</span><span class="p">,</span>
+<span class="no">RestClient</span><span class="p">.</span><span class="nf">post</span> <span class="s1">'https://console.mergely.app/api/v3/job/submit/batch'</span><span class="p">,</span>
          <span class="n">payload</span><span class="p">,</span>
           <span class="p">{</span>
             <span class="ss">authorization: </span><span class="s2">"Bearer </span><span class="si">#{</span><span class="vi">@token</span><span class="si">}</span><span class="s2">"</span> <span class="p">,</span>
@@ -564,7 +564,7 @@ Remember — Don't forge to replace with your own <b>TOKEN</b>
         <span class="p">}</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">'https://mergely.app/api/v3/job/submit/batch'</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://console.mergely.app/api/v3/job/submit/batch'</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'Bearer {token-should-replace-with-yours}'</span><span class="p">,</span>
     <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'Application/json'</span><span class="p">,</span>
@@ -591,7 +591,7 @@ Remember — Don't forge to replace with your own <b>TOKEN</b>
 
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mergely.app/api/v3/job/submit/batch"</span> <span class="se">\</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://console.mergely.app/api/v3/job/submit/batch"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {token-should-replace-with-yours}"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Accept: Application/json"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Content-Type: Application/json"</span> <span class="se">\</span>
@@ -611,7 +611,7 @@ Remember — Don't forge to replace with your own <b>TOKEN</b>
         }
     ]
 }'</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://mergely.app/api/v3/job/submit/batch</span><span class="dl">"</span><span class="p">,{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://console.mergely.app/api/v3/job/submit/batch</span><span class="dl">"</span><span class="p">,{</span>
     <span class="na">method</span><span class="p">:</span><span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
     <span class="na">headers</span><span class="p">:{</span>
         <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bearer {token-should-replace-with-yours}</span><span class="dl">"</span><span class="p">,</span>
@@ -651,7 +651,7 @@ Remember — Don't forge to replace with your own <b>TOKEN</b>
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h1 id='retrieve-jobs'>Retrieve jobs</h1><h2 id='retrieve-job'>Retrieve job</h2><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://mergely.app/api/v3/query/job?uuid={uuid}</code></p>
+<p><code>GET https://console.mergely.app/api/v3/job/query?uuid={uuid}</code></p>
 <h3 id='query-parameter'>Query parameter</h3>
 <table><thead>
 <tr>
@@ -667,20 +667,20 @@ Remember — Don't forge to replace with your own <b>TOKEN</b>
 </tr>
 </tbody></table>
 <div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'rest-client'</span>
-<span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://mergely.app/api/v3/query/job?uuid='</span> <span class="o">+</span> <span class="n">the_uuid</span><span class="p">,{</span>
+<span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://console.mergely.app/api/v3/job/query?uuid='</span> <span class="o">+</span> <span class="n">the_uuid</span><span class="p">,{</span>
     <span class="ss">authorization: </span><span class="s2">"Bearer {token-should-replace-with-yours}"</span><span class="p">,</span>
    <span class="ss">content_type: :json</span><span class="p">,</span>
    <span class="ss">as: :json</span>
 <span class="p">}</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://mergely.app/api/v3/query/job?id={some_uuid}"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://console.mergely.app/api/v3/job/query?id={some_uuid}"</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'Bearer {token-should-replace-with-yours}'</span><span class="p">,</span>
     <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'Application/json'</span><span class="p">,</span>
     <span class="s">'Accept'</span><span class="p">:</span> <span class="s">'Application/json'</span>
 <span class="p">}</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://mergely.app/api/v3/query/job?uuid={some_uuid}</span><span class="dl">"</span><span class="p">,{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://console.mergely.app/api/v3/job/query?uuid={some_uuid}</span><span class="dl">"</span><span class="p">,{</span>
     <span class="na">headers</span><span class="p">:{</span>
         <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bearer {token-should-replace-with-yours}</span><span class="dl">"</span><span class="p">,</span>
         <span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">Application/json</span><span class="dl">"</span><span class="p">,</span>
@@ -689,7 +689,7 @@ Remember — Don't forge to replace with your own <b>TOKEN</b>
 <span class="p">}).</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span> <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">()}).</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 <span class="p">})</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mergely.app/api/v3/job/query?uuid={some_uuid}"</span> <span class="se">\</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://console.mergely.app/api/v3/job/query?uuid={some_uuid}"</span> <span class="se">\</span>
 <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {token-should-replace-with-yours}"</span> <span class="se">\</span>
 <span class="nt">-H</span> <span class="s2">"Accept: Application/json"</span> <span class="se">\</span>
 <span class="nt">-H</span> <span class="s2">"Content-Type: Application/json"</span>
@@ -732,20 +732,20 @@ Remember — Don't forge to replace with your own <b>TOKEN</b>
 The page parameter starts at 0.
 </aside>
 <div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'rest-client'</span>
-<span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://mergely.app/api/v3/query/job/batch?biz=speech2text&amp;status=pending&amp;size=200&amp;page=3'</span><span class="p">,{</span>
+<span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://console.mergely.app/api/v3/job/batch/query?biz=speech2text&amp;status=pending&amp;size=200&amp;page=3'</span><span class="p">,{</span>
     <span class="ss">authorization: </span><span class="s2">"Bearer {token-should-replace-with-yours}"</span><span class="p">,</span>
    <span class="ss">content_type: :json</span><span class="p">,</span>
    <span class="ss">as: :json</span>
 <span class="p">}</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://mergely.app/api/v3/query/job/batch?biz=speech2text&amp;status=pending&amp;size=200&amp;page=3"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://console.mergely.app/api/v3/job/batch/query?biz=speech2text&amp;status=pending&amp;size=200&amp;page=3"</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'Bearer {token-should-replace-with-yours}'</span><span class="p">,</span>
     <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'Application/json'</span><span class="p">,</span>
     <span class="s">'Accept'</span><span class="p">:</span> <span class="s">'Application/json'</span>
 <span class="p">}</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://mergely.app/api/v3/?uery/job/batch?biz=speech2text&amp;status=pending&amp;size=200&amp;page=3</span><span class="dl">"</span><span class="p">,{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://console.mergely.app/api/v3/?job/batch/query?biz=speech2text&amp;status=pending&amp;size=200&amp;page=3</span><span class="dl">"</span><span class="p">,{</span>
     <span class="na">headers</span><span class="p">:{</span>
         <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bearer {token-should-replace-with-yours}</span><span class="dl">"</span><span class="p">,</span>
         <span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">Application/json</span><span class="dl">"</span><span class="p">,</span>
@@ -754,7 +754,7 @@ The page parameter starts at 0.
 <span class="p">}).</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span> <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">()}).</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 <span class="p">})</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mergely.app/api/v3/job/query?query/job/batch?biz=speech2text&amp;status=pending&amp;size=200&amp;page=3"</span> <span class="se">\</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://console.mergely.app/api/v3/job/query/batch?biz=speech2text&amp;status=pending&amp;size=200&amp;page=3"</span> <span class="se">\</span>
 <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {token-should-replace-with-yours}"</span> <span class="se">\</span>
 <span class="nt">-H</span> <span class="s2">"Accept: Application/json"</span> <span class="se">\</span>
 <span class="nt">-H</span> <span class="s2">"Content-Type: Application/json"</span>
